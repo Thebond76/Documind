@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documind - Simplifiez vos études</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .logo-icon {
+            position: relative;
+            width: 40px;
+            height: 40px;
+        }
+        .logo-icon::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #1A73E8;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+        .logo-icon i {
+            color: #1A73E8;
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #E8F0FE;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .feature-icon i {
+            color: #1A73E8;
+            font-size: 24px;
+        }
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        .hamburger {
+            display: none;
+        }
+        .testimonial-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                z-index: 100;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                margin: 10px 0;
+            }
+            .nav-center {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">Documind</h1>
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <div class="nav-links flex items-center">
+                        <div class="nav-center flex space-x-8 mr-8">
+                            <a href="#fonctionnalites" class="text-gray-600 hover:text-blue-600 transition">Fonctionnalités</a>
+                            <a href="#temoignages" class="text-gray-600 hover:text-blue-600 transition">Témoignages</a>
+                        </div>
+                        <a href="https://tally.so/r/wzdE91" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Commencer maintenant</a>
+                    </div>
+                    <button class="hamburger focus:outline-none">
+                        <i class="fas fa-bars text-gray-600 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Simplifiez vos études avec Documind</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+                Transformez vos documents en outils d'apprentissage efficaces : synthèses, guides, QCM et plus encore !
+            </p>
+            <a href="https://tally.so/r/wzdE91" class="bg-blue-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-blue-700 transition inline-block">
+                Commencer maintenant
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="fonctionnalites" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16">Nos fonctionnalités clés</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Guide d'étude</h3>
+                    <p class="text-gray-600">Créez des parcours d'apprentissage personnalisés adaptés à vos besoins spécifiques.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Document de synthèse</h3>
+                    <p class="text-gray-600">Générez des résumés clairs et structurés à partir de vos documents volumineux.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Traduction en français</h3>
+                    <p class="text-gray-600">Traduisez vos contenus en un clic pour une meilleure compréhension.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">FAQ</h3>
+                    <p class="text-gray-600">Obtenez des réponses aux questions fréquentes sur vos sujets d'étude.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">QCM</h3>
+                    <p class="text-gray-600">Évaluez vos connaissances avec des quiz interactifs générés automatiquement.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Suivi de progression</h3>
+                    <p class="text-gray-600">Visualisez vos progrès et identifiez les domaines à améliorer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="temoignages" class="py-20 bg-blue-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-16">Ils utilisent Documind</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Marie D." class="testimonial-img mr-4">
+                        <div>
+                            <h4 class="font-semibold">Marie D.</h4>
+                            <p class="text-sm text-gray-500">Étudiante en médecine</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Grâce à Documind, j'ai réduit mon temps de révision de 50% ! Les synthèses automatiques sont incroyablement précises."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Thomas L." class="testimonial-img mr-4">
+                        <div>
+                            <h4 class="font-semibold">Thomas L.</h4>
+                            <p class="text-sm text-gray-500">Étudiant en droit</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Les QCM générés automatiquement m'ont permis d'identifier mes points faibles et d'améliorer mes résultats aux examens."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophie M." class="testimonial-img mr-4">
+                        <div>
+                            <h4 class="font-semibold">Sophie M.</h4>
+                            <p class="text-sm text-gray-500">Étudiante en ingénierie</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "La fonction de traduction est un vrai plus pour comprendre les articles techniques en anglais. Un gain de temps énorme !"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Prêt à transformer votre façon d'apprendre ?</h2>
+            <a href="https://tally.so/r/wzdE91" class="bg-blue-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-blue-700 transition inline-block">
+                S'inscrire maintenant
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800">Documind</h2>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition">Mentions légales</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition">Politique de confidentialité</a>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500">
+                <p>© 2023 Documind. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</html>
